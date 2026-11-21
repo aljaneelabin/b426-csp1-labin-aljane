@@ -4,9 +4,9 @@ import com.joysistvi.recordingapp.model.Artist;
 
 import java.util.List;
 
-//Repository (Data Tier) -> Data Access Logic and Data Persistence
+// Repository(Data Tier) -> Data Access Logic and Data Persistence
 public interface ArtistRepository {
 
-   public List <Artist> findAllArtists();
-
+   public List<Artist> findAllActive();
+   public boolean save(Artist artists);
 }

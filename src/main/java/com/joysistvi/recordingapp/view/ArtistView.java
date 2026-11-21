@@ -4,13 +4,16 @@ import com.joysistvi.recordingapp.model.Artist;
 import com.joysistvi.recordingapp.service.ArtistService;
 
 import java.util.List;
+import java.util.Scanner;
 
 public class ArtistView {
 
     private final ArtistService artistService;
+    private final Scanner scanner;
 
-    public ArtistView(ArtistService artistService) {
+    public ArtistView(ArtistService artistService, Scanner scanner) {
         this.artistService = artistService;
+        this.scanner = scanner;
     }
 
     public void displayAllArtist() {
@@ -30,5 +33,19 @@ public class ArtistView {
                     artist.getName());
         }
 
+    }
+
+    public void promptCreateArtist(){
+        System.out.println("\n----- Create New Artist -----");
+        System.out.print("Enter artist name: ");
+        String name = scanner.nextLine();
+
+        boolean created = artistService.createArtist(name);
+
+        if (created) {
+            System.out.println("Artist" + name.trim() + "created succesfully");
+        } else {
+            System.out.println("Failed to create artist.");
+        }
     }
 }
