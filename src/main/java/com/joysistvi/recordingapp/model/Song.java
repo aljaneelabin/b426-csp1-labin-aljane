@@ -9,13 +9,10 @@ public class Song {
     private String albumName;
     private boolean archived;
 
-    // Default Constructor
     public Song() {
     }
 
-    // Constructor for retrieving songs from database
-    public Song(int id, String title, String genre, String length,
-                int albumId, String albumName) {
+    public Song(int id, String title, String genre, String length, int albumId, String albumName) {
         this.id = id;
         this.title = title;
         this.genre = genre;
@@ -24,15 +21,15 @@ public class Song {
         this.albumName = albumName;
     }
 
-    // Constructor for creating a new song
-    public Song(String title, String genre, String length, int albumId) {
+    public Song(int id, String title, String genre, String length, int albumId, String albumName, boolean archived) {
+        this.id = id;
         this.title = title;
         this.genre = genre;
         this.length = length;
         this.albumId = albumId;
+        this.albumName = albumName;
+        this.archived = archived;
     }
-
-    // Getters and Setters
 
     public int getId() {
         return id;
@@ -90,4 +87,3 @@ public class Song {
         this.archived = archived;
     }
 }
-

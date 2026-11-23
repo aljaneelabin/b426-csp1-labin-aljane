@@ -11,5 +11,6 @@ public interface AlbumService {
     boolean deleteAlbum(int id);
     boolean archiveAlbum(int id);
     boolean restoreAlbum(int id);
+    Album getAlbumById(int id);
     List<Album> searchAlbums(String keyword);
 }

@@ -182,4 +182,33 @@ public class AlbumRepositoryImpl implements AlbumRepository {
         }
         return albums;
     }
+
+    @Override
+    public Album findById(int id) {
+        String query = "SELECT a.id, a.name, a.year, a.artist_id, ar.name AS artist_name " +
+                "FROM albums a " +
+                "JOIN artists ar ON a.artist_id = ar.id " +
+                "WHERE a.id = ? AND a.is_archived = 0";
+
+        try (Connection conn = dbConnection.connect();
+             PreparedStatement prep = conn.prepareStatement(query)) {
+
+            prep.setInt(1, id);
+
+            try (ResultSet rs = prep.executeQuery()) {
+                if (rs.next()) {
+                    return new Album(
+                            rs.getInt("id"),
+                            rs.getString("name"),
+                            rs.getInt("year"),
+                            rs.getInt("artist_id"),
+                            rs.getString("artist_name")
+                    );
+                }
+            }
+        } catch (SQLException e) {
+            System.out.println("Repository Error (findById): " + e.getMessage());
+        }
+        return null;
+    }
 }

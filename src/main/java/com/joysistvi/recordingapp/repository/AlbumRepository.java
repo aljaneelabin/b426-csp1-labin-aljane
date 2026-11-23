@@ -11,5 +11,6 @@ public interface AlbumRepository {
     boolean deleteById(int id);
     boolean archiveById(int id);
     boolean restoreById(int id);
+    Album findById(int id);
     List<Album> searchByName(String keyword);
 }
