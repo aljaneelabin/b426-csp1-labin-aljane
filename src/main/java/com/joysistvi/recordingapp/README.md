@@ -19,6 +19,7 @@ A Java console application for managing a recording studio's catalog of **artist
 - [Learning Path (3-Day Plan)](#learning-path-3-day-plan)
 - [Troubleshooting](#troubleshooting)
 - [Author](#author)
+- [Acknowledgements](#acknowledgements)
 
 ---
 
