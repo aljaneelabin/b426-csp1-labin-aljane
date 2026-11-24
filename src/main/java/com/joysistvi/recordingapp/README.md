@@ -413,12 +413,12 @@ The project is built progressively in a 3-day class (3 hours per day: about 1 ho
 ## Author
 
 **Aljane Labin**
-- Programming (Java) NC III, Student
-- Batch 4 Year 2026
-- Joysis Tech Voc Inc.
-- GitHub: https://github.com/aljaneelabin/b426-csp1-labin-aljane
+Programming (Java) NC III, Student
+Batch 4 Year 2026
+Joysis Tech Voc Inc.
+GitHub: https://github.com/aljaneelabin/b426-csp1-labin-aljane
 
 ## Acknowledgements
-- (Credits to)
-- Course instructor: Jareth Ronquillo, Joysis Tech Voc Inc.
+(Credits to)
+Course instructor: Jareth Ronquillo, Joysis Tech Voc Inc.
 
